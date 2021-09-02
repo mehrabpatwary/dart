@@ -1,0 +1,152 @@
+Data Type(non type sefty): (var == dynamic), (final == const);
+Data Type(type sefty): number: (int, double), String, List(Like Array), Map(Like Python Dictionary / JSON);
+Built-in-function: print("${variable}"), stdout.write('*') #import 'dart:io';#
+
+Loop: for(Like java){break, continue}, while(){}, do{}while(), for(var i in list){}
+
+Conditional Statement: if(){}, else if(){}, else{}
+
+List:{
+  List list = []; //dynamic / var type (String, integer, double)
+  List<int> intList = []; // integer type
+  List<String> str = []; // String type
+  List<double> dubl = [];// double type
+  #[1, 2, 3] <- values can be assign when declear#
+  list2 = list.map((e) => e*2).toList(); //list assign to another list
+}
+Map:{
+    Map map = {
+    "s1": {"name": "Mehrab", "id": 101},
+    "s2": {
+      "name": "Dolon",
+      "id": 102,
+      "sec": {"dept": "CSE", "sec": "A"}
+    }
+  };
+  #Can be define like-> var map = Map<String, int>();#
+
+  map.forEach((key, value) => print("${key} : ${value}"));
+  var m = map["s2"]["sec"];
+  m.forEach((key, value) => print("${key} : ${value}"));
+
+}
+
+List + Map: List list = [1, 2, 3, 4, 5, 6, {"name": "Mehrab", "age": 24}];
+
+set: {
+    Set set = {
+    1,
+    2,
+    3,
+    "Mehrab",
+    [1, 2, 3],
+    {"name": "Nima", "Age": 17}
+  };
+  #Can be:- Set<String> set = {"Ina", "Mina", "Dika", "Rika"};#
+}
+Hashmap: {
+    var hasmap = HashMap();
+    hasmap["name"] = "Mehrab";
+    hasmap["Age"] = 24;
+    hasmap["City"] = "Dhaka";
+    hasmap["Friend"] = "Manal";
+    #We don't know which serial data will be printed#
+    #Can be:- var hasmap = HashMap<String, String>();#
+}
+HashSet: {
+    var hashset = HashSet();
+  hashset.addAll(["mehrab", "29", "Dolon", "Udoy", "Dolon"]);
+  #We don't know which serial data will be printed#
+  #Can be:- var hashset =HashSet<String>();#
+}
+
+function: {
+    dynamic add(var a, var b) {
+ 
+         return "The sum is ${a + b}";
+    }
+    List myFun(){} //List type return
+}
+
+OOP:{
+  class:{
+    var obj = myClass(); //Create Object
+    class myClass{}
+  }
+  inheritance: {
+    class Son extends Father{}
+  }
+  Abstruct: {
+    abstruct class Father{} // cannot Create Object for abstruct class only can inherite.
+  }
+  super.addTwo(x, y);
+
+  static void sub(){} // this methods directly relation with the class. And no relationship with object.
+
+  Constructor: {
+        class MyClass {
+        var name;
+        var age;
+        MyClass(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      void display() {
+          print("Your name is ${name} and age ${age}");
+        }
+   }
+  }
+
+  Exception:{
+    throw new Exception(); //from function
+    try{}
+    catch(e){}
+  }
+
+  Interface: {
+    class normal implements interfaceClass{
+      @override
+      void studentsAResult() {
+      }
+      
+      @override
+      void studentsName() {
+      } 
+    }
+    class interfaceClass {
+      void studentsName(){}
+      void studentsAResult(){}
+    }
+  }
+}
+
+setter & getter methods: {
+
+  main class: {
+    import 'MyClass.dart';
+
+    void main() {
+      var obj = MyClass();
+      obj.setName = "Mehrab";
+      print(obj.getName);
+    }
+  }
+  myClass: {
+    class MyClass {
+      String name = '';
+
+      set setName(String name) {
+        this.name = name;
+      }
+
+      get getName {
+        return name;
+      }
+    }
+  }
+
+}
+
+
+
